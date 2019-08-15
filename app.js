@@ -63,7 +63,7 @@ const copyLatestBackup = backup => {
 
   const terms = [approvedMonth, approvedDate, approvedHours];
 
-  if (terms.every(x => x === true) & (backup.deleted === false)) {
+  if (terms.every(x => x === true) && (backup.deleted === false)) {
     return copyFile(
       backup.pathname,
       path.resolve(process.cwd(), `${os.hostname()}.sql`)
